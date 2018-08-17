@@ -90,8 +90,7 @@ class FSHARE:
             try:
                 link = req.json()
                 if 'errors' in link:
-                    self.error['error'] = 'Wrong file password'
-                    return self.error
+                    return link['errors']
                 return link['url']
             except json.decoder.JSONDecodeError:
                 raise Exception('Get link failed')

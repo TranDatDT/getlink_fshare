@@ -1,1 +1,1 @@
-from getlink_fshare import FSHARE
+from .getlink_fshare import FSHARE
